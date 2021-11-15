@@ -10,7 +10,8 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 import java.util.List;
 
-
+/*
+Se creal el repositorio */
 @Repository
 public interface PlanRepo extends JpaRepository<Plan, Integer> {
 
