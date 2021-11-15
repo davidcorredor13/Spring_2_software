@@ -7,12 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+
+/**
+ * @Description clase que determina la implementacion de los servicios de mascota
+ */
 @Service
 public class MascotaServicioImpl implements MascotaServicio{
 
+    /**
+     * Atributo que determina el repo de mascota
+     */
     @Autowired
     private  MascotaRepo mascotaRepo;
 
+    /**
+     * @Description Metodo que permite obtener una mascota por su id
+     */
     @Override
     public Mascota obtenerMascota(Integer codigo) throws Exception {
         Optional<Mascota> buscado = mascotaRepo.findById(codigo);
