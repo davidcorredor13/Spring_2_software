@@ -16,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 public class Usuario  {
-
+//se crea la clase usuario, conla cual se realizara la primera historia
 
     @Id
     @Column(length = 10)
