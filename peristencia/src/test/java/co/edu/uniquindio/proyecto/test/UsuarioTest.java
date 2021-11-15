@@ -24,6 +24,10 @@ import java.util.stream.Collectors;
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class UsuarioTest {
+    
+    /**
+    *se cra la clase test, en la cual se prueban todas las funcionalidades del proyecto
+    */
     @Autowired
     private UsuarioRepo usuarioRepo;
 
