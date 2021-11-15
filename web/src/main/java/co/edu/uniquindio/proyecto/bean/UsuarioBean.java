@@ -17,8 +17,8 @@ import java.io.Serializable;
 @Component
 @ViewScoped
 public class UsuarioBean implements Serializable {
-    /*
-se crea la clase bean y las funciones , que se enlazaran con las paginas html y llamaran a los servicios del usuario
+    /**
+*se crea la clase bean y las funciones , que se enlazaran con las paginas html y llamaran a los servicios del usuario
 */
     @Getter @Setter
     private Usuario usuario;
