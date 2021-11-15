@@ -13,7 +13,9 @@ import org.springframework.stereotype.Repository;
 import javax.validation.constraints.Negative;
 import java.util.List;
 import java.util.Optional;
-
+/**
+*se crean los metodos del repositorio con jpl para utilizarlos en la aplicacion con los servicios
+*/
 @Repository
 public interface UsuarioRepo extends JpaRepository<Usuario, String> {
 
