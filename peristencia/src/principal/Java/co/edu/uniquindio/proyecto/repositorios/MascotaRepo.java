@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 @Repository
+// Clase para la interfaz de la mascota
 public interface MascotaRepo extends JpaRepository <Mascota,Integer>{
 
 
