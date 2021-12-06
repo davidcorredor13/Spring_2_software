@@ -31,6 +31,11 @@ public class MascotaBean implements Serializable {
 
     @Value("#{param['usuarioMascotas']}")
     private String usuarioMascotas;
+    
+    /*
+    Metodo que permite inicializar el usuario con sus mascotas
+    */
+
 
     @PostConstruct
     public void inicializar() {
@@ -43,6 +48,10 @@ public class MascotaBean implements Serializable {
         }
 
     }
+    
+    /*
+    Metodo que permite vizualizar lalista de mascotas que pertenecen al usuario
+    */
 
     public String irAListaMascotaUsuario(String codigo){
         return "mascotas?faces-redirect=true&amp;usuarioMascotas="+codigo;
