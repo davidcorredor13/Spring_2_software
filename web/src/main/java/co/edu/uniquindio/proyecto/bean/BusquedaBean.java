@@ -40,6 +40,11 @@ public class BusquedaBean implements Serializable {
     private Usuario usuario;
 
     @PostConstruct
+    
+    
+    /*
+    Metodo que permite inicializar
+    */
 
     public void inicializar(){
         if(codigoUsuario!=null && !codigoUsuario.isEmpty()){
@@ -51,6 +56,10 @@ public class BusquedaBean implements Serializable {
         }
 
     }
+    
+    /*
+    Metodo que permite buscar el usuario
+    */
 
     public String buscar(){
         return "resultado_busqueda?faces-redirect=true&amp;codigoUsuario="+busqueda;
