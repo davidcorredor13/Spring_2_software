@@ -6,6 +6,7 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
@@ -13,7 +14,7 @@ import java.util.List;
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor
-public class Beneficio {
+public class Beneficio implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
@@ -27,7 +28,7 @@ public class Beneficio {
     @Column(nullable = false)
     private Integer precio;
 
-    @ManyToMany (mappedBy = "beneficios")
+    @ManyToMany (mappedBy = "beneficios",cascade = CascadeType.REMOVE)
     @ToString.Exclude
     private List<Plan> planesBeneficio;
 

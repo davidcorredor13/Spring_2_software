@@ -13,6 +13,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.faces.view.facelets.FaceletContext;
 import java.io.Serializable;
+import java.util.List;
 
 @Component
 @ViewScoped
@@ -24,8 +25,12 @@ public class UsuarioBean implements Serializable {
     @Autowired
     private UsuarioServicio usuarioServicio;
 
+    @Getter @Setter
+    private List<Usuario> usuarios;
+
     @PostConstruct
     public void inicializar(){
+        usuarios = usuarioServicio.listarUsuarios();
         usuario = new Usuario();
     }
 
@@ -66,4 +71,6 @@ public class UsuarioBean implements Serializable {
             FacesContext.getCurrentInstance().addMessage(null,mensaje);
         }
     }
+
+
 }

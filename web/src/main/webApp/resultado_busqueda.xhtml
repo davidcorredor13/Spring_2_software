@@ -10,10 +10,32 @@
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Resultados de busqueda</title>
+    <title>Datos de usuario </title>
 </h:head>
 <h:body>
-    <p>#{busquedaBean.productos}</p>
+    <p:panel header="Datos de usuario">
+        <h:form >
+
+            <div class="row d-flex"  >
+
+                <div class="col-lg-8 col-md-1 align-self-center" >
+                    <p:outputPanel >
+                        <h:panelGrid columns="2" cellpadding="5">
+                            <h:outputText value="Codigo :" />
+                            <h:outputText value="#{busquedaBean.usuario.codigo}" style="font-weight:bold" />
+                            <h:outputText value="Nombre :" />
+                            <h:outputText value="#{busquedaBean.usuario.nombre}" style="..." />
+                            <h:outputText value="Email :" />
+                            <h:outputText value="#{busquedaBean.usuario.email}" style="..." />
+                        </h:panelGrid>
+                    </p:outputPanel>
+                    <p:commandButton value="Ver Mascotas" styleClass="ui-button-raised" icon="pi pi-arrow-right" update="@form" iconPos="right" action="#{mascotaBean.irAListaMascotaUsuario(busquedaBean.usuario.codigo)}" />
+
+                </div>
+
+            </div>
+        </h:form>
+    </p:panel>
 
 </h:body>
 </html>

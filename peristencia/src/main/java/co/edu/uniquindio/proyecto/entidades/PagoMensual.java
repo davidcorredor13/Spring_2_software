@@ -1,42 +1,47 @@
 package co.edu.uniquindio.proyecto.entidades;
 
+import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+
 
 @Entity
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor
-public class Mascota implements Serializable {
-
+public class PagoMensual implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer codigo;
 
-    @NotBlank
-    @Column(nullable = false, length = 100)
-    private String nombre;
+    @NotNull
+    @Column(nullable = false)
+    private LocalDateTime fechaPago;
+
+
+
+    @NotNull
+    @Column(nullable = false)
+    private LocalDateTime fechaLimite;
+
+
 
     @NotBlank
     @JoinColumn(nullable = false)
     @Column(nullable = false, length = 100)
-    private String tipoMascota;
+    private String medioPago;
 
-    @ManyToOne
+
+    @OneToOne
     @ToString.Exclude
     @JoinColumn(nullable = false)
-    private Usuario duenoMascota;
-
-    @OneToOne(mappedBy = "mascota",cascade = CascadeType.REMOVE)
-    @ToString.Exclude
-    @JoinColumn(nullable = false)
-    private Plan planMascota;
-
+    private Plan plan;
 
 
 }

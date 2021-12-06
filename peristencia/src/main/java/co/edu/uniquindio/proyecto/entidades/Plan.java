@@ -42,6 +42,11 @@ public class Plan implements Serializable {
     @JoinColumn(nullable = false)
     private Mascota mascota;
 
+    @OneToOne(mappedBy = "plan",cascade = CascadeType.REMOVE)
+    @ToString.Exclude
+    @JoinColumn(nullable = false)
+    private PagoMensual pagoMensual;
+
 
 
 

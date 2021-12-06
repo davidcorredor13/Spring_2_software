@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" >
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Usuarios</title>
+</h:head>
+<h:body>
+    <h2>Mascotas Usuario</h2>
+    <h:form >
+        <p:dataView value="#{mascotaBean.mascotas}" var="mascota"   >
+
+            <p:dataViewListItem >
+                <div class="row d-flex"  >
+
+                    <div class="col-lg-8 col-md-1 align-self-center" >
+                        <p:outputPanel >
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <h:outputText value="Codigo mascota:" />
+                                <h:outputText value="#{mascota.codigo}" style="font-weight:bold" />
+                                <h:outputText value="Nombre mascota:" />
+                                <h:outputText value="#{mascota.nombre}" style="..." />
+                                <h:outputText value="Tipo mascota:" />
+                                <h:outputText value="#{mascota.tipoMascota}" style="..." />
+
+                            </h:panelGrid>
+                        </p:outputPanel>
+
+                    </div>
+                    <div class="col-lg-2 col-md-1 align-self-center" >
+
+                        <p:commandButton value="Asignar Plan" styleClass="ui-button-raised" icon="pi pi-arrow-right" update="@form" iconPos="right" action="#{planBean.irAPlanMascota(mascota.codigo)}" />
+                        <p:commandButton value="Detalle Plan" styleClass="ui-button-raised" icon="pi pi-arrow-right" update="@form" iconPos="right" action="#{detallePlanBean.irADetallePlan(mascota.codigo)}" />
+
+                    </div>
+                </div>
+
+            </p:dataViewListItem>
+        </p:dataView>
+
+    </h:form>
+
+</h:body>
+</html>
