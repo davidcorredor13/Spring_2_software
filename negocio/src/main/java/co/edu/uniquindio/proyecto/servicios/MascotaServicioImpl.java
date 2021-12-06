@@ -8,11 +8,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
+
 @Service
 public class MascotaServicioImpl implements MascotaServicio{
 
+
     @Autowired
     private  MascotaRepo mascotaRepo;
+
 
     @Override
     public Mascota obtenerMascota(Integer codigo) throws Exception {
@@ -30,8 +34,5 @@ public class MascotaServicioImpl implements MascotaServicio{
         return mascotaRepo.listarMascotaUsuario(codigo);
     }
     
-   /* @Override
-    public Mascota obtenerMascota(Integer codigo) throws Exception {
-        return mascotaRepo.findById(codigo).orElseThrow(()-> new Exception("El codio del producto no es valido"));
-    }*/
+
 }

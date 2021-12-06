@@ -1,6 +1,5 @@
 package co.edu.uniquindio.proyecto.repositorios;
 
-import co.edu.uniquindio.proyecto.dto.ProductoValido;
 import co.edu.uniquindio.proyecto.entidades.Beneficio;
 import co.edu.uniquindio.proyecto.entidades.PagoMensual;
 import co.edu.uniquindio.proyecto.entidades.Plan;
@@ -22,22 +21,19 @@ public interface PlanRepo extends JpaRepository<Plan, Integer> {
     List<Plan> buscarPlanPorNombre(String nombre);
 
 
-     List<Plan> findAllByNombreContains(String nombre);
+    List<Plan> findAllByNombreContains(String nombre);
 
-     @Query("select p from Plan p where p.mascota.codigo = :codigo")
-     Plan obtenerPlanMascota(Integer codigo);
+    @Query("select p from Plan p where p.mascota.codigo = :codigo")
+    Plan obtenerPlanMascota(Integer codigo);
 
     @Query("select b from Plan p, IN (p.beneficios) b where p.codigo = :codigo")
     List<Beneficio> obtenerBeneficiosplan(Integer codigo);
 
-     @Query("select pm from PagoMensual pm where pm.plan.codigo = :codigo")
-     PagoMensual obtenerPagoMensual(Integer codigo);
+    @Query("select pm from PagoMensual pm where pm.plan.codigo = :codigo")
+    PagoMensual obtenerPagoMensual(Integer codigo);
 
-     @Query( "select m from  PagoMensual m where (m.fechaLimite > :fechaActual) and (m.codigo = :codigo) " )
-     PagoMensual calcularEstadoPlan(LocalDateTime fechaActual,Integer codigo);
-
-
-
+    @Query( "select m from  PagoMensual m where (m.fechaLimite > :fechaActual) and (m.codigo = :codigo) " )
+    PagoMensual calcularEstadoPlan(LocalDateTime fechaActual,Integer codigo);
 
 
 

@@ -9,6 +9,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
+
+
+
 @Repository
 public interface MascotaRepo extends JpaRepository <Mascota,Integer>{
 
@@ -18,9 +21,6 @@ public interface MascotaRepo extends JpaRepository <Mascota,Integer>{
 
     @Query("select m from Mascota m where m.duenoMascota.codigo = :codigo")
     List<Mascota> listarMascotaUsuario(String codigo);
-
-
-
 
 
 }

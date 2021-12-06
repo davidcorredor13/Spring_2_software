@@ -16,7 +16,9 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @ToString
+
 public class Usuario  implements Serializable {
+
 
 
     @Id

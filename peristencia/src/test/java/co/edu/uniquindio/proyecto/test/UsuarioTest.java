@@ -1,11 +1,8 @@
 package co.edu.uniquindio.proyecto.test;
 
 
-import co.edu.uniquindio.proyecto.dto.ProductoValido;
-import co.edu.uniquindio.proyecto.entidades.Plan;
 import co.edu.uniquindio.proyecto.entidades.Usuario;
 import co.edu.uniquindio.proyecto.repositorios.*;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -17,13 +14,16 @@ import org.springframework.data.domain.Sort;
 import org.springframework.test.context.jdbc.Sql;
 
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class UsuarioTest {
+    
+    /**
+    *se cra la clase test, en la cual se prueban todas las funcionalidades del proyecto
+    */
     @Autowired
     private UsuarioRepo usuarioRepo;
 

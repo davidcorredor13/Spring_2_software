@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+
 @Service
 public class PlanServicioImpl implements PlanServicio {
 
@@ -57,10 +58,6 @@ public class PlanServicioImpl implements PlanServicio {
         planRepo.deleteById(codigo);
     }
 
-    @Override
-    public Plan obtenerPlan(Integer codigo) throws Exception {
-        return planRepo.findById(codigo).orElseThrow(()-> new Exception("El codio del producto no es valido"));
-    }
 
     @Override
     public Plan obtenerPlanMascota(Integer codigo) throws Exception {

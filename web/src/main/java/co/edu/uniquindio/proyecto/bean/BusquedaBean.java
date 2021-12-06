@@ -31,9 +31,6 @@ public class BusquedaBean implements Serializable {
 
 
     @Autowired
-    private PlanServicio productoServicio;
-
-    @Autowired
     private UsuarioServicio usuarioServicio;
 
     @Getter @Setter

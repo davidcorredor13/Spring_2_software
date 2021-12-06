@@ -3,7 +3,10 @@ package co.edu.uniquindio.proyecto.servicios;
 import co.edu.uniquindio.proyecto.entidades.Mascota;
 import co.edu.uniquindio.proyecto.entidades.Usuario;
 
+
 import java.util.List;
+
+
 
 public interface MascotaServicio {
 

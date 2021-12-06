@@ -21,10 +21,6 @@ import java.util.ArrayList;
 public class InicioBean implements Serializable {
 
 
-
-
-
-
     @PostConstruct
     public void inicializar() {
 
