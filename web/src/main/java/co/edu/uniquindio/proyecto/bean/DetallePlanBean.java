@@ -106,3 +106,5 @@ public class DetallePlanBean implements Serializable {
 
 
 }
+
+//implementacion del detalle plan
