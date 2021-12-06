@@ -9,3 +9,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PagoMensualRepo extends JpaRepository<PagoMensual,Integer> {
 }
+
+
+
+
+
+
+
+//repositorio pago mensual
