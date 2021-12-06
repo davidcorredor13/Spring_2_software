@@ -75,3 +75,5 @@ public class SeguridadBean {
 
 
 }
+
+//implementacion de seguridad usuaario
