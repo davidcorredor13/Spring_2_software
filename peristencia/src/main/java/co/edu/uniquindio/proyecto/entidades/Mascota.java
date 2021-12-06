@@ -6,6 +6,11 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
+/**
+* @description entidad que permite modelar una mascota y poder asociala a un cliente
+* @author Alba Rocio Marin Duque
+*/
+
 @Entity
 @Getter
 @Setter
