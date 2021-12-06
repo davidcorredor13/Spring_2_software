@@ -9,6 +9,10 @@ import javax.validation.constraints.Positive;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+* @description entidad que permite colocar los beneficios de las mascotas 
+* @author Alba Rocio Marin Duque
+*/
 @Entity
 @Getter
 @Setter
