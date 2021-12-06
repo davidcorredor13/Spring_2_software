@@ -44,6 +44,10 @@ public class UsuarioBean implements Serializable {
             FacesContext.getCurrentInstance().addMessage(null,mensaje);
         }
     }
+    
+    /*
+    Metodo que permite Eliminar el usuario
+    */
 
 
     public void eliminarUsuario(){
@@ -59,6 +63,9 @@ public class UsuarioBean implements Serializable {
         }
     }
 
+    /*
+    Metodo que permite actualizar el usuario
+    */
 
 
     public void ActualizaarUsuario(){
